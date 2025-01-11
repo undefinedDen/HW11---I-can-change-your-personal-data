@@ -59,12 +59,18 @@ public class Person {
     }
 
     public void changeData() {
-        System.out.print("What do you want to change? Choose a number!!" +
-                "\n1 -- change name;" +
-                "\n2 -- change age;" +
-                "\n3 -- change profession;" +
-                "\n4 -- i do not want change anyone row" +
-                "\nInput number there: ");
+        System.out.print("""
+                What do you want to change? Choose a number!!\
+                
+                1 -- change name;\
+                
+                2 -- change age;\
+                
+                3 -- change profession;\
+                
+                4 -- i do not want change anyone row\
+                
+                Input number there:\s""");
         int change = scanner.nextInt();
         scanner.nextLine();
         switch (change) {
