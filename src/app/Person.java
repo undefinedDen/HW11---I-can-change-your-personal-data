@@ -30,4 +30,17 @@ public class Person {
     public String getProfession() {
         return profession;
     }
+    void displayOutput(String name, int age, String profession){
+        System.out.println("Name: " + name + ", age: " + age + ", Profession: " + profession);
+    }
+    //Enter value for Scanner
+    void enterName(){
+        System.out.print("Enter name: ");
+    }
+    void enterAge(){
+        System.out.print("Enter age: ");
+    }
+    void enterProfession(){
+        System.out.print("Enter profession: ");
+    }
 }
