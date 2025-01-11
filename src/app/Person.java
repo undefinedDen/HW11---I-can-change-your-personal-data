@@ -1,9 +1,12 @@
 package app;
 
+import java.util.Scanner;
+
 public class Person {
     private String name;
     private int age;
     private String profession;
+    static Scanner scanner = new Scanner(System.in);
 
     public void setName(String name) {
         this.name = name;
@@ -53,5 +56,40 @@ public class Person {
 
     void changeProfession(String newProfession) {
         profession = newProfession;
+    }
+
+    public void changeData() {
+        System.out.print("What do you want to change? Choose a number!!" +
+                "\n1 -- change name;" +
+                "\n2 -- change age;" +
+                "\n3 -- change profession;" +
+                "\n4 -- i do not want change anyone row" +
+                "\nInput number there: ");
+        int change = scanner.nextInt();
+        scanner.nextLine();
+        switch (change) {
+            case 1:
+                System.out.print("Enter new name: ");
+                name = scanner.nextLine();
+                break;
+            case 2:
+                System.out.print("Enter new age: ");
+                age = scanner.nextInt();
+                System.out.println("After changing profession");
+                displayOutput(name, age, profession);
+                break;
+            case 3:
+                System.out.print("Enter new profession: ");
+                profession = scanner.nextLine();
+                System.out.println("After changing profession");
+                displayOutput(name, age, profession);
+                break;
+            case 4:
+                displayOutput( name, age, profession);
+                break;
+            default:
+                System.out.println("ERROR! Enter only correct number(1, 2, 3 or 4)!!");
+                displayOutput(name, age, profession);
+        }
     }
 }
